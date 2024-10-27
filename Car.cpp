@@ -1,21 +1,23 @@
 #include <Car.h>
 using namespace std;
 
-Car::Car(){};
+Car::Car(){cout<<"constructor\n";};
 
 Car::Car(const Car& car)
 {
     model=car.model;
     numberPlate=car.numberPlate;
+    cout<<"Copy constructor\n";
 }
 
 Car::Car(const string& inmodel)
 {
     model=inmodel;
+    cout<<"Constructor with parameters\n";
 }
 
 
-Car::~Car(){}
+Car::~Car(){cout<<"Destructor\n";}
 
 
 void Car:: Print() const
