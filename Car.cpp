@@ -1,4 +1,4 @@
-#include <Car.h>
+#include "Car.h"
 #include <iostream>
 using namespace std;
 
@@ -18,7 +18,7 @@ Car::Car(const string& inmodel)
 }
 
 
-Car::~Car(){cout<<"Destructor\n";}
+Car::~Car(){cout<<"Destructor Car\n";}
 
 
 void Car:: Print() const
@@ -49,8 +49,8 @@ void Car::SetNumberPlate(string inNumberPlate)
 
 void Car::Save(ostream& os) const{
     os<< "Car:\n";
-    os<<"model: "<<model<<endl;
-    os<<"NumberPlate: "<<numberPlate<<endl;
+    os<<"model:"<<model<<endl;
+    os<<"NumberPlate:"<<numberPlate<<endl;
     os<<"end"<<endl;
     cout<<"The car is saved succesfully"<<endl;
 }
@@ -63,11 +63,11 @@ void Car::Load(istream& is) {
         if(key=="end")
             break;
         is>>value;
-        if (key=="model")
+        if (key=="model:")
         {
             model=value;
         }
-        else if (key=="NumberPlate")
+        else if (key=="NumberPlate:")
         {
             numberPlate=value;
         }
@@ -105,13 +105,13 @@ bool Car::Menu(){
         case 3:
             {
                 string numberPlate_user;
-                cout<<"Enter car model: ";
+                cout<<"Enter car number plate: ";
                 cin>>numberPlate_user;
-                this->SetModel(numberPlate_user);
+                this->SetNumberPlate(numberPlate_user);
             }
             break;
         case 4:
-            return false;
+            return true;
             break;
         default: 
                 cerr << "Invalid choice.\n";

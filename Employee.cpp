@@ -1,4 +1,4 @@
-#include <Employee.h>
+#include "Employee.h"
 #include <string>
 #include <iostream>
 using namespace std;
@@ -23,7 +23,7 @@ Employee::Employee(const string inName)
 }
 
 
-Employee::~Employee(){cout<<"Destructor\n";}
+Employee::~Employee(){cout<<"Destructor Employee\n";}
 
 void Employee::Print() const
 {

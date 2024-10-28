@@ -1,4 +1,6 @@
-#include <Factory.h>
+#ifndef _EMPLOYEE_H_
+#define _EMPLOYEE_H_
+#include "Factory.h"
 #include <string>
 
 class Employee: public Factory{
@@ -32,3 +34,5 @@ class Employee: public Factory{
         void SetAdress(string inAdress);
         void SetPhoneNumber(string inPhoneNumber);
 };
+
+#endif

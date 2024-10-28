@@ -1,5 +1,7 @@
+#ifndef _CAR_H_
+#define _CAR_H_
 #include <iostream>
-#include <Factory.h>
+#include "Factory.h"
 #include <string>
 using namespace std;
 
@@ -25,3 +27,5 @@ class Car:public Factory
         void SetNumberPlate(string inNumberPlate);
         
 };
+
+#endif

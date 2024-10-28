@@ -1,7 +1,10 @@
+#ifndef _FACTORY_H_
+#define _FACTORY_H_
+
 #include <iostream>
 using namespace std;
 class Factory{
-public:    
+    public:    
 
     Factory(){}
     virtual ~Factory() {};
@@ -11,3 +14,5 @@ public:
     virtual void Load(istream&)        = 0;
     virtual bool Menu()                     = 0;
 };
+
+#endif
